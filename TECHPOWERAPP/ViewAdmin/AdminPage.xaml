@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.ViewAdmin.AdminPage"
+             BackgroundColor="FloralWhite"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <Grid>
+        <!-- Definición de las columnas: la primera es para el menú lateral y la segunda para el contenido -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <!-- Ancho del menú lateral (autoajustable) -->
+            <ColumnDefinition Width="*"/>
+            <!-- Ancho del contenido principal -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Botón pequeño para abrir el menú lateral -->
+        <Button x:Name="MenuButton"
+           Text="☰"
+           TextColor="Black"    
+           FontSize="Large"
+           WidthRequest="30"
+           HeightRequest="25"
+           HorizontalOptions="Start"
+           VerticalOptions="Start"
+           Clicked="MenuButton_Clicked"
+           BackgroundColor="FloralWhite"/>
+
+        <!-- Menú lateral (desplegable) con ScrollView -->
+        <!--<ScrollView>-->
+
+        <!-- Menú lateral (desplegable) -->
+        <StackLayout x:Name="MenuPanel"
+                BackgroundColor="Black"
+                Padding="10"
+                IsVisible="False" 
+                WidthRequest="200"
+                Grid.Column="0"
+                VerticalOptions="FillAndExpand">
+
+            <Label Text="Panel de opciones"  FontFamily="Background" FontSize="28" TextColor="FloralWhite" HorizontalOptions="Center" />
+            <Label/>
+
+            <!-- Botones del menú -->
+
+            <Button x:Name="categoria"
+                Text="Categorías" 
+                   ImageSource="options.png"
+                   ContentLayout="left, 20"
+               Clicked="categoria_Clicked" 
+               CommandParameter="Categorias" 
+               BackgroundColor="Transparent"
+               BorderWidth="2"
+               BorderColor="Black"
+               FontFamily="Family Vacation"
+               TextColor="Gainsboro"
+               FontSize="28"/>
+
+            <Label/>
+
+            <Button x:Name="ProStock"
+                Text="Stock"
+                     ImageSource="product.png"
+                    ContentLayout="left, 20"
+               Clicked="ProStock_Clicked" 
+               CommandParameter="InventarioProductos"
+                 BackgroundColor="Transparent"
+                 BorderWidth="2"
+                 BorderColor="Black"
+                 TextColor="Gainsboro"
+                 FontFamily="Family Vacation"
+                 FontSize="28"
+                 />
+            <Label/>
+            
+            <Button x:Name="usuarios"
+                Text="Lista de Usuarios"
+                     ImageSource="user.png"
+                   ContentLayout="left,10"
+               Clicked="usuarios_Clicked" 
+               CommandParameter="UsuariosList"
+               BackgroundColor="Transparent"
+                 BorderWidth="2"
+                 BorderColor="Black"
+                 TextColor="Gainsboro"
+                 FontFamily="Family Vacation"
+                FontSize="28"/>
+            <Label/>
+            
+            <Button x:Name="cierre"
+                Text="Cierre de Sesión " 
+                     ImageSource="shutdown.png"
+                     ContentLayout="left, 20"
+               Clicked="cierre_Clicked" 
+               CommandParameter="LoginPage"
+                 BackgroundColor="Transparent"
+                 BorderWidth="2"
+                 BorderColor="Black"
+                 TextColor="Gainsboro"
+                 FontFamily="Family Vacation"
+                 FontSize="28"/>
+        </StackLayout>
+        <!--</ScrollView>-->
+
+        <!-- Contenido principal -->
+        <ContentView x:Name="ContentFrame" Grid.Column="1" />
+        <Label Padding="90"
+               Text="Bienvenido   Administrador"
+              FontFamily="Background"
+              FontSize="40"
+              VerticalOptions="Start"
+              HorizontalOptions="Center"
+              Grid.Column="1"
+              TextColor="Black"
+               TranslationX="-25"/>
+
+
+        <Image Source="logo2.png"
+              WidthRequest="300"
+              HeightRequest="200"
+              Grid.Column="1"
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+               TranslationX="-25"/>
+
+    </Grid>
+
+
+</ContentPage>

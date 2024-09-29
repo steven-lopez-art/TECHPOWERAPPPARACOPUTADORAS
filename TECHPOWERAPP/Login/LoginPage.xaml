@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.Login.LoginPage"
+               BackgroundImageSource="fondo8.jpg"
+               NavigationPage.HasNavigationBar="False">
+
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+
+            <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="10">
+                <Image Source="cliente.png" HorizontalOptions="Fill" HeightRequest="210" WidthRequest="600"/>
+
+                <Label Text="Bienvenido" TextColor="Gainsboro" FontSize="40" HorizontalOptions="Center" FontAttributes="Bold" FontFamily="Background"></Label>
+
+                <StackLayout Orientation="Vertical" Margin="0,10" Spacing="5" HorizontalOptions="Center">
+                    <Label Text="Ingrese sus credenciales" TextColor="LightGrey" FontSize="30" HorizontalOptions="Center" FontFamily="School"/>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" Padding="30,0">
+                    <Label Text="INGRESE SU USUARIO:" HorizontalOptions="Center" TextColor="White" FontSize="22" FontFamily="School"/>
+                    <Entry x:Name="UsuarioEntry" Placeholder="Usuario" WidthRequest="250" />
+                    <Label/>
+
+                    <Label Text="INGRESE SU CONTRASEÑA:" HorizontalOptions="Center" TextColor="White" FontSize="22" FontFamily="School"/>
+                    <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True"  WidthRequest="250" />
+
+                    <Label/>
+
+                    <Button x:Name="Inicio" Text="Iniciar Sesión" Clicked="Inicio_Clicked" WidthRequest="200" BackgroundColor="GhostWhite" FontFamily="School" FontSize="24" HeightRequest="13"/>
+                    <Label/>
+                    <Button x:Name="Registrarse" Text="Registrate" Clicked="Registrarse_Clicked" HorizontalOptions="Center" WidthRequest="200" BackgroundColor="Transparent" TextColor="WhiteSmoke" BorderColor="White" BorderWidth="1" FontFamily="School" FontSize="25" HeightRequest="10"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

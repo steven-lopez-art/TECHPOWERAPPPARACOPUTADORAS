@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.ViewAdmin.Categorias"
+              BackgroundColor="#bcaaa4"
+              NavigationPage.HasNavigationBar="False"
+              >
+
+    <ScrollView>
+        <StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                
+                <Button x:Name="volver" ImageSource="atras.png" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" HeightRequest="50" WidthRequest="100" Clicked="volver_Clicked"/>
+
+            </StackLayout>
+
+            <Frame BorderColor="Gainsboro" WidthRequest="400" BackgroundColor="Transparent">
+                <StackLayout>
+                <Label Text="Categorías" FontFamily="Family Vacation" FontSize="54" HorizontalOptions="Center" TextColor="Black"/>
+                <Label/>
+                <!-- Entradas para el producto -->
+                <Entry x:Name="NombreEntry" Placeholder="Nombre de la categoria"  HorizontalOptions="Center" TextColor="Black"/>
+                <Label/>
+
+                <!-- Botón Guardar -->
+            <Button Text="Guardar" FontFamily="School" FontSize="25" Clicked="Button_Clicked" HorizontalOptions="Center" BackgroundColor="AntiqueWhite" TextColor="Black"/>
+
+                    <Label Text="Lista de Categorias" FontSize="35" Margin="0,20,0,10" FontFamily="Family Vacation" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black"/>
+
+
+                    <!-- StackLayout para mostrar la lista de productos -->
+                    <StackLayout x:Name="ProductosStack" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+
+
+
+                </StackLayout>
+            </Frame>
+
+        
+
+
+
+     </StackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>

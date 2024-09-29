@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.ViewCliente.MiPerfil"
+              BackgroundImageSource="fondoperfil.jpeg"
+            NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+
+    <StackLayout  Spacing="15">
+
+            <StackLayout Orientation="Horizontal">
+
+
+                <Image Source="inicio.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="Start"/>
+
+                <Button x:Name="volver" ImageSource="atras.png" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" HeightRequest="50" WidthRequest="100" Clicked="volver_Clicked"/>
+
+
+            </StackLayout>
+
+
+            <!-- Título -->
+        <Label Text="Bienvenido a tu perfil"
+              FontSize="70"
+              FontAttributes="Bold"
+              HorizontalOptions="CenterAndExpand"
+              FontFamily="School"
+              TextColor="Black" />
+
+
+        <!-- Imagen del usuario -->
+        <Image Source="ario.png"
+              WidthRequest="100"
+              HeightRequest="100"
+              HorizontalOptions="CenterAndExpand"
+              Aspect="AspectFill"/>
+
+        
+        <Label/>
+
+        <!-- Información del usuario -->
+        <Frame BackgroundColor="Transparent"
+              CornerRadius="10"
+              HasShadow="True"
+              Padding="10"
+              WidthRequest="400" 
+              HorizontalOptions="CenterAndExpand" 
+              VerticalOptions="CenterAndExpand"
+              HeightRequest="170"
+              BorderColor="Gainsboro"
+             
+               >
+
+
+            <StackLayout>
+                <Label Text="Usuario:"
+                      FontSize="18"
+                      FontAttributes="Bold"
+                      TextColor="Black" 
+                       FontFamily="Basote"/>
+
+                <Label/>
+                
+                <Label x:Name="UserNameLabel"
+                      FontSize="16"
+                      TextColor="#37474f" 
+                       FontFamily="Basote"/>
+
+                <Label/>
+                
+                <Label Text="Contraseña:"
+                      FontSize="18"
+                      FontAttributes="Bold"
+                      TextColor="Black" 
+                       FontFamily="Basote"/>
+
+                <Label/>
+                
+                <Label x:Name="PasswordLabel"
+                      FontSize="16"
+                      TextColor="#37474f" 
+                       FontFamily="Basote"/>
+
+                
+            </StackLayout>
+        </Frame>
+
+        <!-- Botón de cerrar sesión -->
+        <Button x:Name="cerrarperfil"
+               Text="Cerrar sesión"
+               BackgroundColor="Transparent"
+               TextColor="Black"
+               FontFamily="School"
+               FontSize="35"
+               CornerRadius="10"
+               Padding="10"
+               WidthRequest="200"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               Clicked="cerrarperfil_Clicked" 
+                BorderColor="Black"
+                BorderWidth="2"/>
+
+
+
+        <StackLayout Padding="10">
+            <ListView x:Name="ComprasListView" ItemSelected="ComprasListView_ItemSelected" HorizontalOptions="CenterAndExpand" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem x:Name="Modificar" Text="Modificar Título" Clicked="Modificar_Clicked" CommandParameter="{Binding .}"/>
+                                <MenuItem x:Name="Eliminar" Text="Eliminar" Clicked="Eliminar_Clicked" CommandParameter="{Binding .}" IsDestructive="True" />
+                                <MenuItem x:Name="Ir" Text=" Formulario Compra" Clicked="Ir_Clicked" CommandParameter="{Binding .}" />
+                            </ViewCell.ContextActions>
+                            <StackLayout Orientation="Horizontal" Padding="10" Spacing="20">
+                                <Label Text="{Binding NombreCompleto}" VerticalOptions="Center" TextColor="Black"/>
+                                <Label Text="{Binding Total, StringFormat='Total: {0:C}'}" VerticalOptions="Center" TextColor="Black"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+
+
+        <!--<StackLayout Padding="10">
+            <ListView x:Name="ComprasListView" ItemSelected="ComprasListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding NombreCompleto}" Detail="{Binding Total, StringFormat='Total: {0:C}'}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>-->
+
+    </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

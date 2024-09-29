@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.ViewAdmin.Teclado"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="inicio.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="Start"/>
+                <Button x:Name="volver" ImageSource="atras.png" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" HeightRequest="50" WidthRequest="100" Clicked="volver_Clicked"/>
+
+            </StackLayout> 
+            
+
+            <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="10">
+
+
+                <Label Text="Categoría Teclado" TextColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="Family Vacation" FontSize="50" FontAttributes="Bold"/>
+
+                <StackLayout Padding="20">
+
+                    <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                        <!-- Productos: Usar Grid para hacer que el diseño sea más responsive -->
+                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" RowDefinitions="Auto,Auto, Auto" HorizontalOptions="CenterAndExpand">
+                            <!--PRODUCTOO1-->
+                            <Frame Grid.Row="0" Grid.Column="0" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label x:Name="labelN1" TextColor="Black" Text="TECLADO ERGONÓMICO" FontSize="Title"  FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                                    <Image x:Name="imagen1" Source="teclado1.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label x:Name="labelD1" Text="TAMAÑO:  44.5cm x 15cm" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" />
+                                    <Label x:Name="labelP1" Text="Precio: $45.00" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta"
+                                     Text="Compra"
+                                     TextColor="Black"
+                                     HorizontalOptions="End"
+                                     HeightRequest="40"
+                                    Clicked="venta_Clicked" 
+                                    BorderWidth="2"
+                                    BackgroundColor="#ede7f6"
+                                     WidthRequest="120"
+                                    BorderColor="#9575cd"
+                                    FontFamily="Family Vacation"
+                                    FontSize="28"
+                                    ImageSource="carrito1.png"
+                                    ContentLayout="left"/>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--PRODUCTOO2-->
+                            <Frame Grid.Row="0" Grid.Column="1" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="TECLADO INHALÁMRICO" TextColor="Black" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                    <Image Source="teclado2.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="TAMAÑO:  44.5cm x 15cm" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" />
+                                    <Label Text="Precio: $30.00" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta2"
+                                          Text="Compra"
+                                          TextColor="Black"
+                                          HorizontalOptions="End"
+                                          HeightRequest="40"
+                                         Clicked="venta2_Clicked" 
+                                         BorderWidth="2"
+                                          BackgroundColor="#ede7f6"
+                                          WidthRequest="120"
+                                         BorderColor="#9575cd"
+                                         FontFamily="Family Vacation"
+                                         FontSize="28"
+                                          ImageSource="carrito1.png"
+                                           ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+
+
+                            <!--PRODUCTOO3-->
+                            <Frame Grid.Row="0" Grid.Column="2" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="TECLADO GAMER" TextColor="Black"  FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                    <Image Source="teclado3.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="TAMAÑO:  44.5cm x 15cm" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" />
+                                    <Label Text="Precio: $50.00" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta3"
+                                          Text="Compra"
+                                          TextColor="Black"
+                                          HorizontalOptions="End"
+                                          HeightRequest="40"
+                                         Clicked="venta3_Clicked" 
+                                          BackgroundColor="#ede7f6"
+                                         WidthRequest="120"
+                                        BorderColor="#9575cd"
+                                         BorderWidth="2"
+                                         FontFamily="Family Vacation"
+                                         FontSize="28"
+                                          ImageSource="carrito1.png"
+                                          ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--PRODUCTOO4-->
+                            <Frame Grid.Row="0" Grid.Column="3" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="TECLADO MULTIMEDIA" TextColor="Black"  FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                    <Image Source="teclado4.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="TAMAÑO:  44.5cm x 15cm" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" />
+                                    <Label Text="Precio: $35.00" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta4"
+                                       Text="Compra"
+                                       TextColor="Black"
+                                       HorizontalOptions="End"
+                                       HeightRequest="40"
+                                      Clicked="venta4_Clicked" 
+                                       BackgroundColor="#ede7f6"
+                                         WidthRequest="120"
+                                        BorderColor="#9575cd"
+                                      BorderWidth="2"
+                                      FontFamily="Family Vacation"
+                                      FontSize="28"
+                                       ImageSource="carrito1.png"
+                                        ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                        </Grid>
+                    </ScrollView>
+
+
+
+                    <!-- GRID2 -->
+                    <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                        <!-- Productos: Usar Grid para hacer que el diseño sea más responsive -->
+                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" RowDefinitions="Auto,Auto, Auto" HorizontalOptions="CenterAndExpand">
+
+                            <!--PRODUCTOO5-->
+                            <Frame Grid.Row="0" Grid.Column="0" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="TECLADO MULTIMEDIA" TextColor="Black" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                    <Image Source="teclado5.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="TAMAÑO:  44.5cm x 15cm" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" />
+                                    <Label Text="Precio: $35.00" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta5"
+                                     Text="Compra"
+                                     TextColor="Black"
+                                     HorizontalOptions="End"
+                                     HeightRequest="40"
+                                    Clicked="venta5_Clicked" 
+                                     BackgroundColor="#ede7f6"
+                                     WidthRequest="120"
+                                    BorderColor="#9575cd"
+                                    BorderWidth="2"
+                                    FontFamily="Family Vacation"
+                                    FontSize="28"
+                                    ImageSource="carrito1.png"
+                                    ContentLayout="left"/>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--PRODUCTOO6-->
+                            <Frame Grid.Row="0" Grid.Column="1" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="TECLADO NUMÉRICO" TextColor="Black" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                    <Image Source="teclado6.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="TAMAÑO:  140 x 85 x 23 cm" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" />
+                                    <Label Text="Precio: $10.00" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta6"
+                                          Text="Compra"
+                                          TextColor="Black"
+                                          HorizontalOptions="End"
+                                          HeightRequest="40"
+                                         Clicked="venta6_Clicked" 
+                                          BackgroundColor="#ede7f6"
+                                         WidthRequest="120"
+                                        BorderColor="#9575cd"
+                                         BorderWidth="2"
+                                         FontFamily="Family Vacation"
+                                         FontSize="28"
+                                          ImageSource="carrito1.png"
+                                        ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+
+
+                            <!--PRODUCTOO7-->
+                            <Frame Grid.Row="0" Grid.Column="2" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="TECLADO PLEGABLE" TextColor="Black" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                    <Image Source="teclado7.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="TAMAÑO: 11.89 x 3.82 x 0.31 cm" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" />
+                                    <Label Text="Precio: $25.00" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta7"
+                                          Text="Compra"
+                                          TextColor="Black"
+                                          HorizontalOptions="End"
+                                          HeightRequest="40"
+                                         Clicked="venta7_Clicked" 
+                                          BackgroundColor="#ede7f6"
+                                         WidthRequest="120"
+                                        BorderColor="#9575cd"
+                                         BorderWidth="2"
+                                         FontFamily="Family Vacation"
+                                         FontSize="28"
+                                          ImageSource="carrito1.png"
+                                          ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--PRODUCTOO8-->
+                            <Frame Grid.Row="0" Grid.Column="3" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="TECLADO QWERTY" TextColor="Black" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                    <Image Source="teclado8.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="TAMAÑO:  44.5cm x 15cm" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" />
+                                    <Label Text="Precio: $20.00" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta8"
+                                       Text="Compra"
+                                       TextColor="Black"
+                                       HorizontalOptions="End"
+                                       HeightRequest="40"
+                                      Clicked="venta8_Clicked" 
+                                       BackgroundColor="#ede7f6"
+                                         WidthRequest="120"
+                                        BorderColor="#9575cd"
+                                      BorderWidth="2"
+                                      FontFamily="Family Vacation"
+                                      FontSize="28"
+                                       ImageSource="carrito1.png"
+                                        ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                        </Grid>
+                    </ScrollView>
+
+
+                    <!-- GRID3 -->
+                    <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                        <!-- Productos: Usar Grid para hacer que el diseño sea más responsive -->
+                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" RowDefinitions="Auto,Auto, Auto" HorizontalOptions="CenterAndExpand">
+
+                            <!--PRODUCTOO9-->
+                            <Frame Grid.Row="0" Grid.Column="0" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="TECLADO TÁCTIL" TextColor="Black" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                    <Image Source="teclado9.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="TAMAÑO:  44.5cm x 15cm" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" />
+                                    <Label Text="Precio: $40.00" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta9"
+                                     Text="Compra"
+                                     TextColor="Black"
+                                     HorizontalOptions="End"
+                                     HeightRequest="40"
+                                    Clicked="venta9_Clicked" 
+                                      BackgroundColor="#ede7f6"
+                                     WidthRequest="120"
+                                    BorderColor="#9575cd"
+                                    BorderWidth="2"
+                                    FontFamily="Family Vacation"
+                                    FontSize="28"
+                                     ImageSource="carrito1.png"
+                                    ContentLayout="left"/>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--PRODUCTOO10-->
+                            <Frame Grid.Row="0" Grid.Column="1" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="TECLADO CON CONTACTO METALICO" TextColor="Black" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                    <Image Source="teclado10.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="TAMAÑO: 44.5 cm x 15 cm" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" />
+                                    <Label Text="Precio: $50.00" TextColor="Black" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta10"
+                                          Text="Compra"
+                                          TextColor="Black"
+                                          HorizontalOptions="End"
+                                          HeightRequest="40"
+                                         Clicked="venta10_Clicked" 
+                                          BackgroundColor="#ede7f6"
+                                             WidthRequest="120"
+                                            BorderColor="#9575cd"
+                                         BorderWidth="2"
+                                         FontFamily="Family Vacation"
+                                         FontSize="28"
+                                         ImageSource="carrito1.png"
+                                        ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                        </Grid>
+                    </ScrollView>
+
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

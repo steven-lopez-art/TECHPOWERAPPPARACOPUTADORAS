@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.ViewAdmin.UsuariosList"
+             BackgroundColor="FloralWhite"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <StackLayout >
+
+        <StackLayout Orientation="Horizontal">
+
+            <Button x:Name="volver" ImageSource="atras.png" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" HeightRequest="50" WidthRequest="100" Clicked="volver_Clicked"/>
+
+        </StackLayout>
+
+        <Label Text="Usuarios Registrados" FontFamily="School" FontAttributes="Bold" FontSize="50" Margin="0,0,0,10" TextColor="Black" />
+
+        <!-- Encabezado de la tabla -->
+        <Grid ColumnDefinitions="*,*,Auto"
+           RowDefinitions="Auto"
+           BackgroundColor="Gainsboro"
+           Padding="10">
+            <Label Text="Email" FontFamily="OpenSans-Regular" TextColor="Black" FontSize="18" FontAttributes="Bold" Grid.Column="0" />
+            <Label Text="Password" FontFamily="OpenSans-Regular" TextColor="Black" FontSize="18" FontAttributes="Bold" Grid.Column="1" />
+            <Label Text="Acciones" FontFamily="OpenSans-Regular" TextColor="Black" FontSize="18" FontAttributes="Bold" Grid.Column="2" />
+        </Grid>
+
+        <!-- Cuerpo de la tabla -->
+        <CollectionView x:Name="usersCollectionView" Margin="0,10,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*,Auto"
+                       Padding="10"
+                       Margin="0,0,0,1"
+                       BackgroundColor="Gainsboro">
+
+                        <!-- Columna de Email -->
+                        <Label Text="{Binding Email}" Grid.Column="0" VerticalOptions="Center" FontSize="16" FontFamily="OpenSans-Regular" TextColor="Black"/>
+
+                        <!-- Columna de Password -->
+                        <Label Text="{Binding Password}" Grid.Column="1" VerticalOptions="Center"  FontSize="16" FontFamily="OpenSans-Regular" TextColor="Black" />
+
+                        <!-- Botón de Eliminar -->
+                        <Button x:Name="Usuario"
+                            Text="Eliminar"
+                             BackgroundColor="DarkSlateBlue"
+                             TextColor="WhiteSmoke"
+                             ImageSource="basura.png"
+                             Grid.Column="2"
+                             VerticalOptions="Center"
+                             Clicked="Usuario_Clicked"
+                             CommandParameter="{Binding .}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+
+</ContentPage>

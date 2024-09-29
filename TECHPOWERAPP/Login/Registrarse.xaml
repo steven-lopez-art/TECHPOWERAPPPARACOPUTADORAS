@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.Login.Registrarse"
+              BackgroundColor="Black"
+              NavigationPage.HasNavigationBar="False">
+
+
+
+    <StackLayout Padding="30">
+        <Label Text="Registrate!!" FontFamily="Background" FontSize="30" HorizontalTextAlignment="Center"/>
+
+        <Label/>
+
+        <Label Text="Ingrese su Email" FontFamily="School" FontSize="25" HorizontalTextAlignment="Center"/>
+        <Label/>
+        <Entry x:Name="emailEntry" Placeholder="Email" Keyboard="Email" WidthRequest="300" />
+
+        <Label/>
+
+        <Label Text="Ingrese su Contraseña" FontFamily="School" FontSize="25" HorizontalTextAlignment="Center" />
+        <Label/>
+        <Entry x:Name="passwordEntry" Placeholder="Contraseña" IsPassword="True" WidthRequest="300" />
+
+        <Label/>
+
+        <Button Text="Registrarse" Clicked="Button_Clicked" FontFamily="School" FontSize="25" HorizontalOptions="Center" BackgroundColor="WhiteSmoke" />
+    </StackLayout>
+
+
+</ContentPage>

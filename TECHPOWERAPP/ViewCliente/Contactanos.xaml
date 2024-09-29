@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.ViewCliente.Contactanos"
+              BackgroundColor="White"
+              NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+              
+        <StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+
+                <Image Source="inicio.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="Start"/>
+
+                <Button x:Name="volver" ImageSource="atras.png" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" HeightRequest="50" WidthRequest="100" Clicked="volver_Clicked"/>
+
+
+            </StackLayout>
+
+            <Label Text="Contacta a TechPower"
+                 FontSize="60"
+                 FontFamily="Family Vacation"
+                 HorizontalOptions="Center"
+                 TextColor="Black"/>
+
+            <Label/>
+            
+            
+
+            <Label Text="Teléfono:"
+                   FontFamily="Family Vacation"
+                 FontSize="38" 
+                 HorizontalOptions="Center"
+                 TextColor="Black"
+                   />
+
+            <!-- Usamos un HorizontalStack para mostrar el logo y el número juntos -->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+
+                <Label Text="+1 (800) 123-4567"
+                     FontAttributes="Italic"
+                     FontSize="20" 
+                     TextColor="Black"/>
+                <Image Source="social.png" WidthRequest="30" HeightRequest="30" />
+            </HorizontalStackLayout>
+
+            <Label/>
+
+
+            <Label Text="Correo Electrónico:"
+                   FontFamily="Family Vacation"
+                   FontSize="38"
+                   Margin="0,10,0,0" 
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+            
+            <Label Text="soporte@techpower.com"
+                 FontAttributes="Italic"
+                 FontSize="20" 
+                 HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <Label/>
+
+
+            <Label Text="Dirección:"
+                 FontFamily="Family Vacation"
+                 FontSize="38"
+                 Margin="0,10,0,0" 
+                 HorizontalOptions="Center"
+                   TextColor="Black"/>
+            
+            <Label Text="123 Calle Electrónica, Ciudad Tecnológica"
+                 FontAttributes="Italic"
+                 FontSize="20"
+                 HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <Label/>
+
+            <Label Text="Envía un mensaje:"
+                 FontFamily="Family Vacation"
+                 FontSize="38"
+                 Margin="20,20,0,0" 
+                 HorizontalOptions="Center" 
+                   TextColor="Black"/>
+
+            <Entry Placeholder="Escribe tu nombre" Margin="0,10,0,0" TextColor="Black"/>
+            <Entry Placeholder="Escribe tu correo" Margin="0,10,0,0" TextColor="Black"/>
+            <Editor Placeholder="Escribe tu mensaje" HeightRequest="100" Margin="0,10,0,0" TextColor="Black"/>
+
+            <Button x:Name="enviar"
+                Text="Enviar"
+                  BackgroundColor="LightBlue"
+                  TextColor="Black"
+                  Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                  Clicked="enviar_Clicked" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

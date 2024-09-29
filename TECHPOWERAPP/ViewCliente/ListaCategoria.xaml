@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.ViewCliente.ListaCategoria"
+              BackgroundColor="White"
+            NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Horizontal" >
+
+                <Image Source="inicio.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="Start"/>
+                <Button x:Name="volver" Clicked="volver_Clicked" ImageSource="atras.png" BackgroundColor="Transparent"  HorizontalOptions="EndAndExpand" HeightRequest="50" WidthRequest="100"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="10">
+
+
+
+                <Label Text="Busca los productos de tu preferencia" 
+                       VerticalOptions="FillAndExpand"
+                       HorizontalOptions="CenterAndExpand" 
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center" 
+                       FontFamily="School" FontSize="50" TextColor="Black"/>
+
+                <StackLayout Padding="20">
+
+ 
+
+                    <!-- Botones de categorías -->
+                    <ScrollView Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+                            <!-- Spacing para separación -->
+                            <Button x:Name="Teclado" Text="Teclado" Clicked="Teclado_Clicked" WidthRequest="120" Margin="5,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightBlue" FontFamily="School" FontSize="26"   ImageSource="keyboard.png" ContentLayout="left"/>
+                            <Button x:Name="Monitor" Text="Monitor" Clicked="Monitor_Clicked" WidthRequest="120" Margin="5,0"    HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightBlue" FontFamily="School" FontSize="26" ImageSource="computer.png" ContentLayout="left"/>
+                            <Button x:Name="Mouse" Text="Mouse" Clicked="Mouse_Clicked" WidthRequest="120" Margin="5,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightBlue" FontFamily="School" FontSize="26" ImageSource="mouse.png" ContentLayout="left"/>
+                        </StackLayout>
+                    </ScrollView>
+
+                    <Label/>
+                    <Label/>
+
+                    <!-- Banner de promociones -->
+                    <Image Source="banner3.png" HeightRequest="500"  HorizontalOptions="FillAndExpand"/>
+                    <Label/>
+
+                    <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                        <!-- Productos: Usar Grid para hacer que el diseño sea más responsive -->
+                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" RowDefinitions="Auto,Auto, Auto" HorizontalOptions="CenterAndExpand">
+                            <Frame Grid.Row="0" Grid.Column="0" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" BorderColor="Gainsboro">
+                                <StackLayout>
+                                    <Label Text="Producto 1" FontFamily="Basote" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="Black"/>
+                                    <Image Source="monitor1.png" HeightRequest="120"/>
+                                    <Label Text="Monitor Dell UltraSharp 27 4K Ultra HD" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Label/>
+                                    <Label Text="Precio: $300.00"  FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+
+                            <Frame Grid.Row="0" Grid.Column="1" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" BorderColor="Gainsboro">
+                                <StackLayout>
+                                    <Label Text="Producto 2" FontFamily="Basote" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="Black"/>
+                                    <Image Source="teclado1.png" HeightRequest="120"/>
+                                    <Label Text="Teclado Microsoft QWERTY" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Label/>
+                                    <Label/>
+                                    <Label Text="Precio: $90.00" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame Grid.Row="0" Grid.Column="2" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" BorderColor="Gainsboro">
+                                <StackLayout>
+                                    <Label Text="Producto 3" FontFamily="Basote" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="Black"/>
+                                    <Image Source="mouse2.png" HeightRequest="120"/>
+                                    <Label Text="Ratón Razer Lancehead Tournament" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Label/>
+                                    <Label Text="Precio: $80.00" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame Grid.Row="0" Grid.Column="3" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" BorderColor="Gainsboro">
+                                <StackLayout>
+                                    <Label Text="Producto 4" FontFamily="Basote" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="Black"/>
+                                    <Image Source="monitor2.png" HeightRequest="120"/>
+                                    <Label Text="Monitor Acer Predator" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Label/>
+                                    <Label/>
+                                    <Label Text="Precio: $180.00" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame Grid.Row="0" Grid.Column="4" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" BorderColor="Gainsboro">
+                                <StackLayout>
+                                    <Label Text="Producto 5" FontFamily="Basote" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="Black"/>
+                                    <Image Source="teclado3.png" HeightRequest="120"/>
+                                    <Label Text="Teclado Steelseries Apex Pro" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Label/>
+                                    <Label/>
+                                    <Label Text="Precio: $150" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                        </Grid>
+                    </ScrollView>
+
+                    <!-- Puedes añadir más productos aquí utilizando más columnas y filas -->
+                    <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" RowDefinitions="Auto, Auto, Auto" HorizontalOptions="CenterAndExpand">
+                            <Frame Grid.Row="0" Grid.Column="0" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" BorderColor="Gainsboro">
+                                <StackLayout>
+                                    <Label Text="Producto 6" FontFamily="Basote" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="Black"/>
+                                    <Image Source="monitor5.png" HeightRequest="120"/>
+                                    <Label Text="Monitor Dell UltraSharp 27 4K Ultra HD" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Label/>
+                                    <Label Text="Precio: $300.00" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame Grid.Row="0" Grid.Column="1" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" BorderColor="Gainsboro">
+                                <StackLayout>
+                                    <Label Text="Producto 7" FontFamily="Basote" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="Black"/>
+                                    <Image Source="mouse9.png" HeightRequest="120"/>
+                                    <Label Text="Monitor LED 4K UHD Asus ROGSwift" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Label/>
+                                    <Label/>
+                                    <Label Text="Precio: $260.00" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Puedes añadir más productos aquí utilizando más columnas y filas -->
+                            <Frame Grid.Row="0" Grid.Column="2" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" BorderColor="Gainsboro">
+                                <StackLayout>
+                                    <Label Text="Producto 8" FontFamily="Basote" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="Black"/>
+                                    <Image Source="teclado7.png" HeightRequest="120"/>
+                                    <Label Text="Teclado Plegable" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Label/>
+                                    <Label/>
+                                    <Label/>
+                                    <Label Text="Precio: $100" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame Grid.Row="0" Grid.Column="3" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" BorderColor="Gainsboro">
+                                <StackLayout>
+                                    <Label Text="Producto 9" FontFamily="Basote" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="Black"/>
+                                    <Image Source="monitor4.png" HeightRequest="120"/>
+                                    <Label Text="Monitor Dell" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Label/>
+                                    <Label/>
+                                    <Label/>
+                                    <Label Text="Precio: $200.00" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame Grid.Row="0" Grid.Column="4" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" BorderColor="Gainsboro">
+                                <StackLayout>
+                                    <Label Text="Producto 10" FontFamily="Basote" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="Black"/>
+                                    <Image Source="mouse4.png" HeightRequest="120"/>
+                                    <Label Text="Klip Xtreme  Mouse Inhalámbrico Vector" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Label/>
+                                    <Label/>
+                                    <Label Text="Precio: $90.00" FontSize="15" FontFamily="Basote" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                        </Grid>
+                    </ScrollView>
+
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+
+</ContentPage>

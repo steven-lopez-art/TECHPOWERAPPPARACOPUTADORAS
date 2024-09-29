@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.ViewCliente.Monitor"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Horizontal">
+
+
+                <Image Source="inicio.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="Start"/>
+
+                <Button x:Name="volver" ImageSource="atras.png" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" HeightRequest="50" WidthRequest="100" Clicked="volver_Clicked"/>
+
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="10">
+
+
+                <Label Text="Categoría Monitores" TextColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="Family Vacation" FontSize="50" FontAttributes="Bold"/>
+
+                <StackLayout Padding="20">
+
+                    <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                        <!-- Productos: Usar Grid para hacer que el diseño sea más responsive -->
+                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" RowDefinitions="Auto,Auto, Auto" HorizontalOptions="CenterAndExpand">
+                            <!--PRODUCTOO1-->
+                            <Frame Grid.Row="0" Grid.Column="0" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="MONITOR HP" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Image Source="monitor1.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="M24FWA FHP " FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" TextColor="Black"/>
+                                    <Label Text="Precio: $239.00" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5" TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta"
+                                 Text="Compra"
+                                 TextColor="Black"
+                                 HorizontalOptions="End"
+                                 HeightRequest="40"
+                                Clicked="venta_Clicked" 
+                                BackgroundColor="#ede7f6"
+                                WidthRequest="120"
+                                BorderColor="#9575cd"
+                                BorderWidth="2"
+                                FontFamily="Family Vacation"
+                                FontSize="28"
+                                 ImageSource="carrito1.png"
+                                 ContentLayout="left"/>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--PRODUCTOO2-->
+                            <Frame Grid.Row="0" Grid.Column="1" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="MONITOR GAMER" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Image Source="monitor2.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="CURVADO" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" TextColor="Black"/>
+                                    <Label Text="Precio: $189.00" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5" TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta2"
+                                      Text="Compra"
+                                      TextColor="Black"
+                                      HorizontalOptions="End"
+                                      HeightRequest="40"
+                                     Clicked="venta2_Clicked" 
+                                     BackgroundColor="#ede7f6"
+                                    WidthRequest="120"
+                                    BorderColor="#9575cd"
+                                     BorderWidth="2"
+                                     FontFamily="Family Vacation"
+                                     FontSize="28"
+                                      ImageSource="carrito1.png"
+                                    ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+
+
+                            <!--PRODUCTOO3-->
+                            <Frame Grid.Row="0" Grid.Column="2" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="MONITOR HP" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Image Source="monitor3.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="HD LARGE" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" TextColor="Black"/>
+                                    <Label Text="Precio: $329.00" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5" TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta3"
+                                      Text="Compra"
+                                      TextColor="Black"
+                                      HorizontalOptions="End"
+                                      HeightRequest="40"
+                                     Clicked="venta3_Clicked" 
+                                     BackgroundColor="#ede7f6"
+                                    WidthRequest="120"
+                                    BorderColor="#9575cd"
+                                     BorderWidth="2"
+                                     FontFamily="Family Vacation"
+                                     FontSize="28"
+                                      ImageSource="carrito1.png"
+                                    ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--PRODUCTOO4-->
+                            <Frame Grid.Row="0" Grid.Column="3" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="MONITOR DELL" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Image Source="monitor4.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="FHD" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" TextColor="Black"/>
+                                    <Label Text="Precio: $119.00" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5" TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta4"
+                                   Text="Compra"
+                                   TextColor="Black"
+                                   HorizontalOptions="End"
+                                   HeightRequest="40"
+                                  Clicked="venta4_Clicked" 
+                                  BackgroundColor="#ede7f6"
+                                WidthRequest="120"
+                                BorderColor="#9575cd"
+                                  BorderWidth="2"
+                                  FontFamily="Family Vacation"
+                                  FontSize="28"
+                                   ImageSource="carrito1.png"
+                                 ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                        </Grid>
+                    </ScrollView>
+
+
+
+                    <!-- GRID2 -->
+                    <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                        <!-- Productos: Usar Grid para hacer que el diseño sea más responsive -->
+                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" RowDefinitions="Auto,Auto, Auto" HorizontalOptions="CenterAndExpand">
+
+                            <!--PRODUCTOO5-->
+                            <Frame Grid.Row="0" Grid.Column="0" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="MONITOR HP" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Image Source="monitor5.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="FHD" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" TextColor="Black"/>
+                                    <Label Text="Precio: $180.90" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5" TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta5"
+                                 Text="Compra"
+                                 TextColor="Black"
+                                 HorizontalOptions="End"
+                                 HeightRequest="40"
+                                Clicked="venta5_Clicked" 
+                                BackgroundColor="#ede7f6"
+                                WidthRequest="120"
+                                BorderColor="#9575cd"
+                                BorderWidth="2"
+                                FontFamily="Family Vacation"
+                                FontSize="28"
+                                 ImageSource="carrito1.png"
+                                 ContentLayout="left"/>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--PRODUCTOO6-->
+                            <Frame Grid.Row="0" Grid.Column="1" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="MONITOR GAMER" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Image Source="monitor6.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="CURVADO ASUS" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" TextColor="Black"/>
+                                    <Label Text="Precio: $449.00" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5" TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta6"
+                                      Text="Compra"
+                                      TextColor="Black"
+                                      HorizontalOptions="End"
+                                      HeightRequest="40"
+                                     Clicked="venta6_Clicked" 
+                                     BackgroundColor="#ede7f6"
+                                    WidthRequest="120"
+                                    BorderColor="#9575cd"
+                                     BorderWidth="2"
+                                     FontFamily="Family Vacation"
+                                     FontSize="28"
+                                      ImageSource="carrito1.png"
+                                    ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+
+
+                            <!--PRODUCTOO7-->
+                            <Frame Grid.Row="0" Grid.Column="2" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="MONITOR GAMER" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Image Source="monitor7.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="CURVADO HP FHD" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" TextColor="Black"/>
+                                    <Label Text="Precio: $299.95" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5" TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta7"
+                                      Text="Compra"
+                                      TextColor="Black"
+                                      HorizontalOptions="End"
+                                      HeightRequest="40"
+                                     Clicked="venta7_Clicked"
+                                     BackgroundColor="#ede7f6"
+                                    WidthRequest="120"
+                                    BorderColor="#9575cd"
+                                     BorderWidth="2"
+                                     FontFamily="Family Vacation"
+                                     FontSize="28"
+                                      ImageSource="carrito1.png"
+                                     ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--PRODUCTOO8-->
+                            <Frame Grid.Row="0" Grid.Column="3" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="MONITOR HP" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Image Source="monitor8.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="M24FW FHP" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" TextColor="Black"/>
+                                    <Label Text="Precio: $179.00" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5" TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta8"
+                                   Text="Compra"
+                                   TextColor="Black"
+                                   HorizontalOptions="End"
+                                   HeightRequest="40"
+                                  Clicked="venta8_Clicked"
+                                  BackgroundColor="#ede7f6"
+                                    WidthRequest="120"
+                                    BorderColor="#9575cd"
+                                  BorderWidth="2"
+                                  FontFamily="Family Vacation"
+                                  FontSize="28"
+                                   ImageSource="carrito1.png"
+                                    ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                        </Grid>
+                    </ScrollView>
+
+
+                    <!-- GRID3 -->
+                    <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                        <!-- Productos: Usar Grid para hacer que el diseño sea más responsive -->
+                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" RowDefinitions="Auto,Auto, Auto" HorizontalOptions="CenterAndExpand">
+
+                            <!--PRODUCTOO9-->
+                            <Frame Grid.Row="0" Grid.Column="0" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="MONITOR GAMER" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Image Source="monitor9.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="CURVADO" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14"  TextColor="Black"/>
+                                    <Label Text="Precio: $469.00" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5" TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta9"
+                                 Text="Compra"
+                                 TextColor="Black"
+                                 HorizontalOptions="End"
+                                 HeightRequest="40"
+                                Clicked="venta9_Clicked"
+                                BackgroundColor="#ede7f6"
+                                WidthRequest="120"
+                                BorderColor="#9575cd"
+                                BorderWidth="2"
+                                FontFamily="Family Vacation"
+                                FontSize="28"
+                                 ImageSource="carrito1.png"
+                                 ContentLayout="left"/>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--PRODUCTOO10-->
+                            <Frame Grid.Row="0" Grid.Column="1" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" BorderColor="Gainsboro">
+                                <StackLayout Spacing="5">
+                                    <Label Text="MONITOR GAMER" FontSize="Title" FontFamily="Family Vacation" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    <Image Source="monitor10.png" WidthRequest="170" HeightRequest="80"/>
+                                    <Label Text="CURVADO HP" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" TextColor="Black"/>
+                                    <Label Text="Precio: $579.86" FontFamily="OpenSans-Regular" HorizontalTextAlignment="Center" FontSize="14" Padding="5" TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+
+                                        <Button x:Name="venta10"
+                                      Text="Compra"
+                                      TextColor="Black"
+                                      HorizontalOptions="End"
+                                      HeightRequest="40"
+                                     Clicked="venta10_Clicked" 
+                                     BackgroundColor="#ede7f6"
+                                    WidthRequest="120"
+                                    BorderColor="#9575cd"
+                                     BorderWidth="2"
+                                     FontFamily="Family Vacation"
+                                     FontSize="28"
+                                      ImageSource="carrito1.png"
+                                      ContentLayout="left"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                        </Grid>
+                    </ScrollView>
+
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

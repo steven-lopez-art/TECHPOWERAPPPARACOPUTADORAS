@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TECHPOWERAPP.ViewAdmin.InventarioProductos"
+             BackgroundColor="FloralWhite"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+
+            <Button x:Name="volver" ImageSource="atras.png" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" HeightRequest="50" WidthRequest="100" Clicked="volver_Clicked"/>
+
+        </StackLayout>
+
+        <Label Padding="50" Text="Listado de Productos" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontFamily="School" FontSize="60" TextColor="Black"/>
+
+        <ListView x:Name="ProductListView" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Padding="10">
+                            <Image Source="{Binding ImagenURL}" HeightRequest="100" />
+                            <Label Text="{Binding Nombre}" FontSize="Medium" TextColor="Black" />
+                            <Label Text="{Binding Precio, StringFormat='Precio: {0:C}'}" FontSize="Small" TextColor="Black" />
+                            <Label Text="{Binding Descripcion}" FontSize="Small"  TextColor="Black"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

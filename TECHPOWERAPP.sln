@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TECHPOWERAPP", "TECHPOWERAPP\TECHPOWERAPP.csproj", "{5D23B3DF-780B-47CF-8738-92259F3E9EC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D23B3DF-780B-47CF-8738-92259F3E9EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D23B3DF-780B-47CF-8738-92259F3E9EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D23B3DF-780B-47CF-8738-92259F3E9EC8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5D23B3DF-780B-47CF-8738-92259F3E9EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D23B3DF-780B-47CF-8738-92259F3E9EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D23B3DF-780B-47CF-8738-92259F3E9EC8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7AF1E73-7254-4C90-B98C-CEDA504B617E}
+	EndGlobalSection
+EndGlobal
